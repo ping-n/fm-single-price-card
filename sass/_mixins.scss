@@ -1,0 +1,13 @@
+$mobile-width: 640px;
+
+@mixin tablet {
+  @media only screen and (max-width: $mobile-width) {
+    @content;
+  }
+}
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

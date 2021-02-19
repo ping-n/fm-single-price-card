@@ -1,0 +1,129 @@
+// Price Card
+
+.price-card {
+  min-width: 70rem;
+  height: 50rem;
+  max-width: 70rem;
+  border-radius: 1rem;
+  background: $color-white;
+  box-shadow: 0 5px 15px rgba(1, 1, 1, 0.2);
+  color: $color-white;
+  overflow: hidden;
+
+  @include tablet {
+    min-width: 40rem;
+    height: 50rem;
+    max-width: 20rem;
+    overflow: visible;
+  }
+
+  &__header {
+    padding: 4rem;
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: $color-primary-cyan;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: $color-primary-yellow;
+    }
+
+    p {
+      font-size: 1.7rem;
+      line-height: 2.5rem;
+      color: $color-grey-blue;
+    }
+  }
+
+  &__price {
+    padding: 4rem;
+    background: $color-primary-cyan;
+
+    h3 {
+      margin-bottom: 3rem;
+    }
+    p {
+      margin-bottom: 1rem;
+      font-size: 1.7rem;
+    }
+
+    #amount {
+      display: flex;
+      font-size: 3.5rem;
+      font-weight: 700;
+
+      span {
+        padding: 1rem;
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: $color-grey-light;
+      }
+    }
+
+    button {
+      display: block;
+      text-align: center;
+      font-weight: 700;
+      font-size: 1.4rem;
+      letter-spacing: 0.1rem;
+      margin: 4rem auto;
+      border: 0;
+      outline: 0;
+      border-radius: 0.5rem;
+      width: 100%;
+      padding: 1.8rem;
+      background: $color-primary-yellow;
+      color: $color-white;
+      box-shadow: 0 0.2rem 1.5rem rgba(1, 1, 1, 0.2);
+    }
+  }
+
+  &__info {
+    background: $color-primary-cyan-light;
+    padding: 4rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      border-bottom-left-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+    }
+
+    h3 {
+      margin-bottom: 2rem;
+    }
+
+    ul {
+      color: $color-grey-light;
+      list-style: none;
+
+      li {
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+      }
+    }
+  }
+}
+
+// Attribution
+.attribution {
+  font-size: 2rem;
+  text-align: center;
+  padding: 4rem;
+
+  a {
+    font-weight: 700;
+    text-decoration: none;
+    color: limegreen;
+
+    &:active,
+    &:hover {
+      color: $color-primary-yellow;
+    }
+  }
+}

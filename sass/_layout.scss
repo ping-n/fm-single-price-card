@@ -1,0 +1,64 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background: $color-grey-light;
+  position: relative;
+
+  @include tablet {
+    overflow-x: hidden;
+  }
+}
+
+.app {
+  width: 100%;
+  height: 100%;
+
+  @include center;
+
+  @include tablet {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    margin-top: 5rem;
+  }
+}
+
+.price-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  box-sizing: border-box;
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header {
+    grid-column: 1 / 3;
+  }
+
+  &__price {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  &__info {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+
+  @include tablet {
+    display: none;
+  }
+}
